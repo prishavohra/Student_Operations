@@ -62,3 +62,32 @@ public class StudentFunctions {
         System.out.println("Student with PRN " + prn + " not found.");
         return false;
     }
+
+   public void updateByPrn() {
+        System.out.println("Enter PRN : ");
+        int prn = sc.nextInt();
+
+        for (Student student : studentDatabase) {
+            if (student.getPrn() == prn) {
+                System.out.println("Enter New name : ");
+                String newName = sc.next();
+                student.setName(newName);
+
+                System.out.println("Enter dob : ");
+                String dob = sc.next();
+                student.setDob(dob);
+
+                System.out.println("Enter marks : ");
+                double marks = sc.nextDouble();
+                student.setMarks(marks);
+
+                System.out.println("Enter position: ");
+                int position = sc.nextInt();
+                student.setPosition(position);
+
+                System.out.println("Student with PRN " + prn + " updated successfully.");
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
