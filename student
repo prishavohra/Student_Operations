@@ -1,1 +1,8 @@
 // Student.java
+public class Student {
+
+    private int prn;
+    private String name;
+    private String dob;
+    private double marks;
+    private int position;
