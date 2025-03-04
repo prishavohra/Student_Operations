@@ -91,3 +91,17 @@ public class StudentFunctions {
         }
         System.out.println("Student with PRN " + prn + " not found.");
     }
+
+
+    public void searchByPrn() {
+        System.out.println("Enter PRN to search: ");
+        int prn = sc.nextInt();
+
+        for (Student student : studentDatabase) {
+            if (student.getPrn() == prn) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+        System.out.println("Student with PRN " + prn + " not found.");
+    }
