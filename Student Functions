@@ -32,3 +32,17 @@ public class StudentFunctions {
             studentDatabase.add(s);
         }
     }
+
+    public void printStudentDetails() {
+        System.out.println("------Student Details-----");
+        System.out.println("PRN\tName\tMarks\tPosition");
+
+        for (Student student : studentDatabase) {
+            int prn = student.getPrn();
+            String name = student.getName();
+            double marks = student.getMarks();
+            int position = student.getPosition();
+
+            System.out.println(prn + "\t" + name + "\t" + marks + "\t" + position);
+        }
+    }
