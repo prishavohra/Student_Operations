@@ -2,3 +2,33 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+public class StudentFunctions {
+
+    private ArrayList<Student> studentDatabase = new ArrayList<>();
+    private Scanner sc = new Scanner(System.in);
+
+    public void addStudent() {
+        System.out.println("How many Students ? ");
+        int noOfStudent = sc.nextInt();
+        for (int i = 0; i < noOfStudent; i++) {
+            System.out.println("Enter PRN : ");
+            int prn = sc.nextInt();
+
+            System.out.println("Enter Name : ");
+            String name = sc.next();
+
+            System.out.println("Enter dob : ");
+            String dob = sc.next();
+
+            System.out.println("Enter marks : ");
+            double marks = sc.nextDouble();
+
+            System.out.println("Enter position: ");
+            int position = sc.nextInt();
+
+            Student s = new Student(prn, name, marks, dob);
+            s.setPosition(position);
+            studentDatabase.add(s);
+        }
+    }
