@@ -105,3 +105,37 @@ public class StudentFunctions {
         }
         System.out.println("Student with PRN " + prn + " not found.");
     }
+
+    public void searchByName() {
+        System.out.println("Enter Name to search: ");
+        sc.nextLine(); // Consume newline left-over
+        String desiredName = sc.nextLine();
+
+        for (Student student : studentDatabase) {
+            if (student.getName().equalsIgnoreCase(desiredName)) {
+                System.out.println("Student found: " + student);
+                return;
+            }
+        }
+
+        System.out.println("Student with name '" + desiredName + "' not found.");
+    }
+
+    public void searchByPosition() {
+        System.out.println("Enter Position to search: ");
+        int desiredPosition = sc.nextInt();
+        boolean found = false;
+
+        for (Student student : studentDatabase) {
+            if (student.getPosition() == desiredPosition) {
+                System.out.println("Student found: " + student);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Student with position '" + desiredPosition + "' not found.");
+        }
+    }
+}
