@@ -1,12 +1,6 @@
 // Main.java
 import java.util.Scanner;
 
-/*
-Name: Prisha Vohra
-PRN: 23070126096
-Batch: AIML B1
-*/
-
 public class Main {
 
     public static void main(String[] args) {
